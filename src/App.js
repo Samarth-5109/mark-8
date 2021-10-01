@@ -11,7 +11,8 @@ var symbolDictionary = {
   "🚷": "No Pedestrians",
   "📵": "No Mobile Phones",
   "☢️": "Radioactive",
-  "☣️": "Biohazard"
+  "☣️": "Biohazard",
+  "⚠️": "Warning"
 };
 
 var emojiWeKnew = Object.keys(symbolDictionary);
