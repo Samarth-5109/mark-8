@@ -23,6 +23,10 @@ export default function App() {
   function emojiInputHandler(event) {
     var userInput = event.target.value;
     var meaning = symbolDictionary[userInput];
+
+    if (meaning === undefined) {
+      meaning = "!We dont have this in our data base!";
+    }
     setMeaning(meaning);
   }
   function emojiClickHandler(emoji) {
@@ -34,7 +38,7 @@ export default function App() {
     <div className="App">
       <h1>Symbol Interpreter</h1>
       <input
-        placeholder="place your flag here"
+        placeholder="place your symbol here"
         onChange={emojiInputHandler}
       ></input>
       <div onChange={emojiInputHandler}>{meaning}</div>
